@@ -33,9 +33,6 @@ if example == "Sample Data":
 else:    
     file = st.file_uploader("Upload file", type=['csv', 'xlsx'])
     
-fig10, ax= plt.subplots()
-ax.plot(file)
-st.pyplot(fig10)    
     
 if st.checkbox("Confirm file upload"): 
     if f_type== ".csv": #if file is .csv upload as .csv, else upload as excel
