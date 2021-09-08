@@ -27,15 +27,16 @@ st.subheader("b: Upload your file")
 
 
 if example:
-    df_og = pd.read_csv(sampleData)
+    file = pd.read_csv(sampleData)
 
-elif:    
+else:    
     file = st.file_uploader("Upload file", type=['csv', 'xlsx'])
-    if st.checkbox("Confirm file upload"): 
-        if f_type== ".csv": #if file is .csv upload as .csv, else upload as excel
-            df_og = pd.read_csv(file)
-        else:
-            df_og = pd.read_excel(file)
+    
+if st.checkbox("Confirm file upload"): 
+    if f_type== ".csv": #if file is .csv upload as .csv, else upload as excel
+        df_og = pd.read_csv(file)
+    else:
+        df_og = pd.read_excel(file)
 else:
     st.error("You must confirm your file upload to proceed.")
     st.stop()
