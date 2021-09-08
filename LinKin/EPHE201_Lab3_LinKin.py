@@ -35,7 +35,7 @@ else:
     
 
 fig10, ax= plt.subplots()
-ax.plot(file["z"]
+ax.plot(file["z"])
 st.pyplot(fig10)
 
     
