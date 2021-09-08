@@ -36,9 +36,9 @@ else:
             df_og = pd.read_csv(file)
         else:
             df_og = pd.read_excel(file)
-    else:
-        st.error("You must confirm your file upload to proceed.")
-        st.stop()
+else:
+    st.error("You must confirm your file upload to proceed.")
+    st.stop()
 
 #Visualize the axis of Translation:
 st.header("""Select the column containing the axis the translation:""")
