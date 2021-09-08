@@ -24,8 +24,8 @@ st.subheader("a: Select the file type you are uploading (Note: only .csv and .xl
 f_type=st.selectbox('Select the file type', [".csv", ".xlsx"]) #Give option to upload file as .csv or .xlsx
 st.subheader("b: Upload your file")
 
-plt.plot(sampleData)
-plt.show()
+st.pyplot(sampleData)
+
 
 if example == "Sample Data":
     file = pd.read_csv(sampleData)
