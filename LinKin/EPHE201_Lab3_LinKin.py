@@ -28,7 +28,7 @@ st.subheader("b: Upload your file")
 
 
 if example == "Sample Data":
-    file = pd.read_csv(sampleData)
+    file = sampleData
 
 else:    
     file = st.file_uploader("Upload file", type=['csv', 'xlsx'])
