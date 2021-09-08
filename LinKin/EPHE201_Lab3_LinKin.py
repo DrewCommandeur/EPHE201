@@ -29,7 +29,7 @@ st.subheader("b: Upload your file")
 if example:
     df_og = pd.read_csv(sampleData)
 
-else:    
+elif:    
     file = st.file_uploader("Upload file", type=['csv', 'xlsx'])
     if st.checkbox("Confirm file upload"): 
         if f_type== ".csv": #if file is .csv upload as .csv, else upload as excel
