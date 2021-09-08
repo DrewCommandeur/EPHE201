@@ -24,7 +24,9 @@ st.subheader("a: Select the file type you are uploading (Note: only .csv and .xl
 f_type=st.selectbox('Select the file type', [".csv", ".xlsx"]) #Give option to upload file as .csv or .xlsx
 st.subheader("b: Upload your file")
 
-st.pyplot(sampleData)
+fig10, ax= plt.subplots()
+ax.plot(sampleData)
+st.pyplot(fig10)
 
 
 if example == "Sample Data":
