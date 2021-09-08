@@ -11,7 +11,7 @@ import streamlit as st
 from scipy import integrate
 import matplotlib.pyplot as plt 
 
-sampleData = "https://raw.githubusercontent.com/mmrllab/EPHE201Streamlits/main/Lab3_LinKin/25m_SprintData.csv?token=APQJN4GWSDOCVS5LZQN2FXLBHELPG"
+sampleData = "https://raw.githubusercontent.com/DrewCommandeur/EPHE201/main/LinKin/25m_SprintData.csv"
 
 st.title('Lab 3: Linear Kinematics- Sprint Analysis') #Title for Streamlit
 st.write("*In this lab, you will learn how to calculate kinematic values from raw IMU sprinting data.*")
