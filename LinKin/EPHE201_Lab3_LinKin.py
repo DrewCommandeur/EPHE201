@@ -26,7 +26,7 @@ st.subheader("b: Upload your file")
 
 
 
-if example:
+if example == "Sample Data":
     file = pd.read_csv(sampleData)
 
 else:    
