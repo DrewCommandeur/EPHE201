@@ -34,9 +34,6 @@ else:
     file = st.file_uploader("Upload file", type=['csv', 'xlsx'])
     
 
-fig10, ax= plt.subplots()
-ax.plot(file["z"])
-st.pyplot(fig10)
 
     
 if st.checkbox("Confirm file upload"): 
