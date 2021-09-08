@@ -19,26 +19,26 @@ st.write("*In this lab, you will learn how to calculate kinematic values from ra
 #Import Data:
 st.header("""Upload the IMU data you would like to analyze:""")
 st.subheader("Choose Data Source")
-# example = st.selectbox('Choose data source', ['Sample Data', 'Data from file'])
+example = st.selectbox('Choose data source', ['Sample Data', 'Data from file'])
 st.subheader("a: Select the file type you are uploading (Note: only .csv and .xlsx files are accepted)")
 f_type=st.selectbox('Select the file type', [".csv", ".xlsx"]) #Give option to upload file as .csv or .xlsx
 st.subheader("b: Upload your file")
 
 
 
-# if example:
-#     df_og = pd.read_csv(sampleData)
+if example:
+    df_og = pd.read_csv(sampleData)
 
-# else:    
-file = st.file_uploader("Upload file", type=['csv', 'xlsx'])
-if st.checkbox("Confirm file upload"): 
-    if f_type== ".csv": #if file is .csv upload as .csv, else upload as excel
-        df_og = pd.read_csv(file)
+else:    
+    file = st.file_uploader("Upload file", type=['csv', 'xlsx'])
+    if st.checkbox("Confirm file upload"): 
+        if f_type== ".csv": #if file is .csv upload as .csv, else upload as excel
+            df_og = pd.read_csv(file)
+        else:
+            df_og = pd.read_excel(file)
     else:
-        df_og = pd.read_excel(file)
-else:
-    st.error("You must confirm your file upload to proceed.")
-    st.stop()
+        st.error("You must confirm your file upload to proceed.")
+        st.stop()
 
 #Visualize the axis of Translation:
 st.header("""Select the column containing the axis the translation:""")
